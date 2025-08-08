@@ -170,8 +170,12 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 100px;
+  max-height: max(5vw, 45px);
   margin-right: 8px;
+}
+
+#header > div > a > img:nth-child(2) {
+  width: 150px;
 }
 
 .header .logo svg {
