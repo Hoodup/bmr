@@ -460,3 +460,119 @@ document.addEventListener("DOMContentLoaded", () => {
   //   document.querySelector('#no-results').style.display = anyMatch ? 'none' : 'block';
   // });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.querySelectorAll('.share-btn').forEach(btn => {
+//   btn.addEventListener('click', (e) => {
+//     // Find the closest property-item container for this button
+//     const propertyItem = btn.closest('.property-item');
+//     if (!propertyItem) return;
+
+//     // Get the property link href (first .property-link inside propertyItem)
+//     const propertyLinkElement = propertyItem.querySelector('a.property-link');
+//     if (!propertyLinkElement) return;
+
+//     // Resolve full absolute URL of the property
+//     const relativeUrl = propertyLinkElement.getAttribute('href');
+//     const propertyUrl = new URL(relativeUrl, window.location.origin).href;
+
+//     // Construct social share URLs
+//     const shareUrls = {
+//       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(propertyUrl)}`,
+//       twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(propertyUrl)}&text=${encodeURIComponent('Check out this property!')}`,
+//       whatsapp: `https://wa.me/?text=${encodeURIComponent('Check out this property: ' + propertyUrl)}`
+//     };
+
+//     // Open a new popup window and write the share links
+//     const shareWindow = window.open('', 'Share', 'width=400,height=300');
+//     shareWindow.document.write(`
+//       <html>
+//       <head><title>Share Property</title></head>
+//       <body style="font-family:sans-serif; padding:20px;">
+//         <p>Share this property on:</p>
+//         <ul>
+//           <li><a href="${shareUrls.facebook}" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+//           <li><a href="${shareUrls.twitter}" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+//           <li><a href="${shareUrls.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+//         </ul>
+//       </body>
+//       </html>
+//     `);
+//     shareWindow.document.close();
+//   });
+// });
+
+
+document.querySelectorAll('.share-btn').forEach(button => {
+  const shareMenu = document.createElement('div');
+  shareMenu.className = 'share-menu';
+  shareMenu.style.display = 'none';
+  shareMenu.style.position = 'absolute';
+  shareMenu.style.background = '#fff';
+  shareMenu.style.border = '1px solid #ccc';
+  shareMenu.style.padding = '8px';
+  shareMenu.style.borderRadius = '6px';
+  shareMenu.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+  shareMenu.style.zIndex = 1000;
+  shareMenu.innerHTML = `
+    <a href="#" class="share-link" data-network="facebook" target="_blank">Facebook</a><br>
+    <a href="#" class="share-link" data-network="twitter" target="_blank">Twitter</a><br>
+    <a href="#" class="share-link" data-network="whatsapp" target="_blank">WhatsApp</a>
+  `;
+  document.body.appendChild(shareMenu);
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const rect = button.getBoundingClientRect();
+    shareMenu.style.top = `${rect.bottom + window.scrollY}px`;
+    shareMenu.style.left = `${rect.left + window.scrollX}px`;
+    shareMenu.style.display = shareMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  shareMenu.querySelectorAll('.share-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const url = window.location.href; // Replace if you have property-specific URL
+      const network = e.target.dataset.network;
+      let shareUrl = '';
+
+      if (network === 'facebook') {
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      } else if (network === 'twitter') {
+        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+      } else if (network === 'whatsapp') {
+        shareUrl = `https://wa.me/?text=${encodeURIComponent(url)}`;
+      }
+
+      window.open(shareUrl, '_blank', 'width=600,height=400');
+      shareMenu.style.display = 'none'; // Hide menu after click
+    });
+  });
+
+  // Close the menu if user clicks outside
+  document.addEventListener('click', () => {
+    shareMenu.style.display = 'none';
+  });
+});
+
