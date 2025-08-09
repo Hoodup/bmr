@@ -143,7 +143,7 @@
               <div class="col-lg-10">
                 <div class="search-wrapper">
                   <div class="row g-3">
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                       <div class="search-field">
                         <label>Location</label>
                         <input
@@ -152,11 +152,26 @@
                           placeholder="Enter city or zip"
                         />
                       </div>
+                    </div> -->
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="search-field">
+                        <label>Location</label>
+                        <select id="filter-location" class="form-select">
+                          <option>Enter city</option>
+                          <option>Lekki</option>
+                          <option>Ajah</option>
+                          <option>Epe</option>
+                          <option>Ikoyi</option>
+                          <option>VGC</option>
+                        </select>
+                      </div>
                     </div>
+
                     <div class="col-lg-2 col-md-6">
                       <div class="search-field">
                         <label>Type</label>
-                        <select class="form-select">
+                        <select id="filter-type" class="form-select">
                           <option>Any Type</option>
                           <option>House</option>
                           <option>Land</option>
@@ -168,7 +183,7 @@
                     <div class="col-lg-2 col-md-6">
                       <div class="search-field">
                         <label>Price</label>
-                        <select class="form-select">
+                        <select id="filter-price" class="form-select">
                           <option>Any Price</option>
                           <option>₦0 - ₦500k</option>
                           <option>₦500k - ₦1M</option>
@@ -220,20 +235,23 @@
                     class="d-flex gap-3 align-items-center justify-content-lg-end"
                   >
                     <div class="sort-dropdown">
-                      <select class="form-select form-select-sm">
+                      <select
+                        id="filter-sort"
+                        class="form-select form-select-sm"
+                      >
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
-                        <option>Newest First</option>
-                        <option>Largest Size</option>
+                        <!-- <option>Newest First</option>
+                        <option>Largest Size</option> -->
                       </select>
                     </div>
                     <div class="view-toggle">
                       <button class="view-btn active" data-view="masonry">
                         <i class="bi bi-grid"></i>
                       </button>
-                      <button class="view-btn" data-view="rows">
+                      <!-- <button class="view-btn" data-view="rows">
                         <i class="bi bi-view-stacked"></i>
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                 </div>
@@ -243,6 +261,19 @@
 
           <div class="properties-container">
             <div
+              id="no-results"
+              style="
+                display: none;
+                text-align: center;
+                padding: 2rem;
+                font-weight: bold;
+              "
+            >
+              No matching properties found.
+              <!-- No matching properties found.    -->
+            </div>
+
+            <div
               class="properties-masonry view-masonry active"
               data-aos="fade-up"
               data-aos-delay="250"
@@ -251,10 +282,10 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
+                    data-location="Ikoyi"
                     data-type="House"
                     data-price="1850000"
-                    data-bedrooms="5"
+                    data-bedrooms="1"
                     data-pool="1"
                   >
                     <a
@@ -311,12 +342,12 @@
                         </h4>
                         <p class="property-address">
                           <i class="bi bi-geo-alt"></i>
-                          3458 Sunset Boulevard, Beverly Hills, CA 90210
+                          3458 Sunset Boulevard, Ikoyi 90210
                         </p>
                         <div class="property-specs">
                           <div class="spec-item">
                             <i class="bi bi-house-door"></i>
-                            <span>5 Bedrooms</span>
+                            <span>1 Bedrooms</span>
                           </div>
                           <div class="spec-item">
                             <i class="bi bi-droplet"></i>
@@ -363,8 +394,8 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
+                    data-location="Ajah"
+                    data-type="Apartment"
                     data-price="1850000"
                     data-bedrooms="5"
                     data-pool="1"
@@ -477,7 +508,7 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
+                    data-location="Ikoyi"
                     data-type="House"
                     data-price="1850000"
                     data-bedrooms="5"
@@ -588,7 +619,7 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
+                    data-location="epe"
                     data-type="House"
                     data-price="1850000"
                     data-bedrooms="5"
@@ -702,7 +733,1361 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
+                    data-location="Ikoyi"
+                    data-type="Apartment"
+                    data-price="1850000"
+                    data-bedrooms="4"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-7.webp"
+                          alt="Townhouse"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">16</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦725,000</div>
+                          <div class="property-type">Townhouse</div>
+                        </div>
+                        <h4 class="property-title">
+                          Contemporary Waterfront Townhouse
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          234 Harbor Drive, Miami, FL 33101
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>3 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,950 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-9.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Bernard</strong>
+                            <span>Coastal Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ikoyi"
+                    data-type="House"
+                    data-price="50000"
+                    data-bedrooms="5"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-8.webp"
+                          alt="Condo"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge reduced"
+                            >Price Reduced</span
+                          >
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">12</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦645,000 <span class="old-price">₦695,000</span>
+                          </div>
+                          <div class="property-type">Condo</div>
+                        </div>
+                        <h4 class="property-title">
+                          High-Rise Condo with City Views
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          789 Skyline Tower, epe, Lagos 98101
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>2 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,450 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-3.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Chukwuebuka</strong>
+                            <span>Pacific Northwest Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ikoyi"
+                    data-type="House"
+                    data-price="1850000"
+                    data-bedrooms="5"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-2.webp"
+                          alt="Luxury Villa"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge featured">Featured</span>
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">14</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦1,850,000</div>
+                          <div class="property-type">House</div>
+                        </div>
+                        <h4 class="property-title">
+                          Luxury Modern Villa with Pool
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          3458 Sunset Boulevard, Ikoyi 90210
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>5 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>4 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>3,400 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-2.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Jennifer Miller</strong>
+                            <span>Prime Realty Group</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="vgc"
+                    data-type="Apartment"
+                    data-price="1850000"
+                    data-bedrooms="1"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-1.webp"
+                          alt="Modern Apartment"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge new">New Listing</span>
+                          <span class="status-badge rent">For Rent</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">9</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦5,200<span>/month</span>
+                          </div>
+                          <div class="property-type">Apartment</div>
+                        </div>
+                        <h4 class="property-title">
+                          Downtown Modern Penthouse
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          1247 Broadway Street, Manhattan, NY 10001
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>3 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>2,100 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-4.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Manu</strong>
+                            <span>Urban Living Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ikoyi"
+                    data-type="House"
+                    data-price="1850000"
+                    data-bedrooms="5"
+                    data-pool="0"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-5.webp"
+                          alt="Family Home"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">11</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦975,000</div>
+                          <div class="property-type">House</div>
+                        </div>
+                        <h4 class="property-title">
+                          Charming Family Home with Garden
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          892 Maple Grove Avenue, Austin, TX 73301
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>4 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>3 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>2,650 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-9.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Lisa Anderson</strong>
+                            <span>Texas Home Solutions</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="epe"
+                    data-type="House"
+                    data-price="1850000"
+                    data-bedrooms="1"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-6.webp"
+                          alt="Studio Loft"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge open">Open House</span>
+                          <span class="status-badge rent">For Rent</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">7</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦3,400<span>/month</span>
+                          </div>
+                          <div class="property-type">Loft</div>
+                        </div>
+                        <h4 class="property-title">
+                          Industrial Style Studio Loft
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          567 Warehouse District, Brooklyn, NY 11201
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>Studio</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>1 Bathroom</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,200 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-8.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Marcus Johnson</strong>
+                            <span>Brooklyn Properties</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ajah"
+                    data-type="House"
+                    data-price="725000"
+                    data-bedrooms="3"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-7.webp"
+                          alt="Townhouse"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">16</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦725,000</div>
+                          <div class="property-type">Townhouse</div>
+                        </div>
+                        <h4 class="property-title">
+                          Contemporary Waterfront Townhouse
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          234 Harbor Drive, Miami, FL 33101
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>3 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,950 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-9.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Bernard</strong>
+                            <span>Coastal Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ikoyi"
+                    data-type="Apartment"
+                    data-price="1850000"
+                    data-bedrooms="5"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-8.webp"
+                          alt="Condo"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge reduced"
+                            >Price Reduced</span
+                          >
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">12</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦645,000 <span class="old-price">₦695,000</span>
+                          </div>
+                          <div class="property-type">Condo</div>
+                        </div>
+                        <h4 class="property-title">
+                          High-Rise Condo with City Views
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          789 Skyline Tower, epe, Lagos 98101
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>2 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,450 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-3.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Chukwuebuka</strong>
+                            <span>Pacific Northwest Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Ikoyi"
+                    data-type="Apartment"
+                    data-price="1850000"
+                    data-bedrooms="3"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-2.webp"
+                          alt="Luxury Villa"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge featured">Featured</span>
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">14</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦1,850,000</div>
+                          <div class="property-type">House</div>
+                        </div>
+                        <h4 class="property-title">
+                          Luxury Modern Villa with Pool
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          3458 Sunset Boulevard, Ikoyi 90210
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>3 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>4 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>3,400 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-2.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Jennifer Miller</strong>
+                            <span>Prime Realty Group</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="vgc"
+                    data-type="Apartment"
+                    data-price="300000"
+                    data-bedrooms="5"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-1.webp"
+                          alt="Modern Apartment"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge new">New Listing</span>
+                          <span class="status-badge rent">For Rent</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">9</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦300,000<span>/month</span>
+                          </div>
+                          <div class="property-type">Apartment</div>
+                        </div>
+                        <h4 class="property-title">
+                          Downtown Modern Penthouse
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          1247 Broadway Street, Manhattan, NY 10001
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>3 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>2 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>2,100 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-4.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Manu</strong>
+                            <span>Urban Living Realty</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="VGC"
+                    data-type="Apartment"
+                    data-price="999000"
+                    data-bedrooms="2"
+                    data-pool="0"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-exterior-5.webp"
+                          alt="Family Home"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge sale">For Sale</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">11</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">₦999,000</div>
+                          <div class="property-type">House</div>
+                        </div>
+                        <h4 class="property-title">
+                          Charming Family Home with Garden
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          892 Maple Grove Avenue, Austin, TX 73301
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>4 Bedrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>3 Bathrooms</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>2,650 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-9.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Lisa Anderson</strong>
+                            <span>Texas Home Solutions</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="epe"
+                    data-type="Apartment"
+                    data-price="900000"
+                    data-bedrooms="2"
+                    data-pool="1"
+                  >
+                    <a
+                      href="properties-available\property-details.html"
+                      class="property-link"
+                    >
+                      <div class="property-image-wrapper">
+                        <img
+                          src="assets/img/real-estate/property-interior-6.webp"
+                          alt="Studio Loft"
+                          class="img-fluid"
+                        />
+                        <div class="property-status">
+                          <span class="status-badge open">Open House</span>
+                          <span class="status-badge rent">For Rent</span>
+                        </div>
+                        <div class="property-actions">
+                          <button
+                            class="action-btn favorite-btn"
+                            data-toggle="tooltip"
+                            title="Add to Favorites"
+                          >
+                            <i class="bi bi-heart"></i>
+                          </button>
+                          <button
+                            class="action-btn share-btn"
+                            data-toggle="tooltip"
+                            title="Share Property"
+                          >
+                            <i class="bi bi-share"></i>
+                          </button>
+                          <button
+                            class="action-btn gallery-btn"
+                            data-toggle="tooltip"
+                            title="View Gallery"
+                          >
+                            <i class="bi bi-images"></i>
+                            <span class="gallery-count">7</span>
+                          </button>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="property-details">
+                      <a
+                        href="properties-available\property-details.html"
+                        class="property-link"
+                      >
+                        <div class="property-header">
+                          <div class="property-price">
+                            ₦900,000<span>/month</span>
+                          </div>
+                          <div class="property-type">Loft</div>
+                        </div>
+                        <h4 class="property-title">
+                          Industrial Style Studio Loft
+                        </h4>
+                        <p class="property-address">
+                          <i class="bi bi-geo-alt"></i>
+                          567 Warehouse District, Brooklyn, NY 11201
+                        </p>
+                        <div class="property-specs">
+                          <div class="spec-item">
+                            <i class="bi bi-house-door"></i>
+                            <span>Studio</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-droplet"></i>
+                            <span>1 Bathroom</span>
+                          </div>
+                          <div class="spec-item">
+                            <i class="bi bi-arrows-angle-expand"></i>
+                            <span>1,200 sq ft</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="property-agent-info">
+                        <a
+                          href="properties-available\property-details.html"
+                          class="property-link"
+                        >
+                          <div class="agent-avatar">
+                            <img
+                              src="assets/img/real-estate/agent-8.webp"
+                              alt="Agent"
+                            />
+                          </div>
+                          <div class="agent-details">
+                            <strong>Marcus Johnson</strong>
+                            <span>Brooklyn Properties</span>
+                          </div>
+                        </a>
+                        <div class="agent-contact">
+                          <a
+                            href="properties-available\property-details.html"
+                            class="property-link"
+                          >
+                          </a
+                          ><a href="tel:+2347018899056" class="contact-btn">
+                            <i class="bi bi-telephone"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Property Item -->
+
+                <div class="col-lg-4 col-md-6">
+                  <div
+                    class="property-item"
+                    data-location="Lekki"
                     data-type="House"
                     data-price="1850000"
                     data-bedrooms="5"
@@ -813,7 +2198,7 @@
                 <div class="col-lg-4 col-md-6">
                   <div
                     class="property-item"
-                    data-location="Beverly Hills, CA"
+                    data-location="Ikoyi"
                     data-type="House"
                     data-price="1850000"
                     data-bedrooms="5"
@@ -877,2307 +2262,7 @@
                         </h4>
                         <p class="property-address">
                           <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
-                        </p>
-                        <div class="property-specs">
-                          <div class="spec-item">
-                            <i class="bi bi-house-door"></i>
-                            <span>2 Bedrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-droplet"></i>
-                            <span>2 Bathrooms</span>
-                          </div>
-                          <div class="spec-item">
-                            <i class="bi bi-arrows-angle-expand"></i>
-                            <span>1,450 sq ft</span>
-                          </div>
-                        </div>
-                      </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Property Item -->
-                <div class="col-lg-4 col-md-6">
-                  <div
-                    class="property-item"
-                    data-location="Beverly Hills, CA"
-                    data-type="House"
-                    data-price="1850000"
-                    data-bedrooms="5"
-                    data-pool="1"
-                  >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
-                      <div class="property-image-wrapper">
-                        <img
-                          src="assets/img/real-estate/property-interior-8.webp"
-                          alt="Condo"
-                          class="img-fluid"
-                        />
-                        <div class="property-status">
-                          <span class="status-badge reduced"
-                            >Price Reduced</span
-                          >
-                          <span class="status-badge sale">For Sale</span>
-                        </div>
-                        <div class="property-actions">
-                          <button
-                            class="action-btn favorite-btn"
-                            data-toggle="tooltip"
-                            title="Add to Favorites"
-                          >
-                            <i class="bi bi-heart"></i>
-                          </button>
-                          <button
-                            class="action-btn share-btn"
-                            data-toggle="tooltip"
-                            title="Share Property"
-                          >
-                            <i class="bi bi-share"></i>
-                          </button>
-                          <button
-                            class="action-btn gallery-btn"
-                            data-toggle="tooltip"
-                            title="View Gallery"
-                          >
-                            <i class="bi bi-images"></i>
-                            <span class="gallery-count">12</span>
-                          </button>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="property-details">
-                      <a
-                        href="properties-available\property-details.html"
-                        class="property-link"
-                      >
-                        <div class="property-header">
-                          <div class="property-price">
-                            ₦645,000 <span class="old-price">₦695,000</span>
-                          </div>
-                          <div class="property-type">Condo</div>
-                        </div>
-                        <h4 class="property-title">
-                          High-Rise Condo with City Views
-                        </h4>
-                        <p class="property-address">
-                          <i class="bi bi-geo-alt"></i>
-                          789 Skyline Tower, Ikoyi, Lagos 98101
+                          789 Skyline Tower, epe, Lagos 98101
                         </p>
                         <div class="property-specs">
                           <div class="spec-item">
@@ -3269,8 +2354,7 @@
                                   </div>
                                   <p class="property-address">
                                     <i class="bi bi-geo-alt"></i>
-                                    3458 Sunset Boulevard, Beverly Hills, CA
-                                    90210
+                                    3458 Sunset Boulevard, vgc 90210
                                   </p>
                                   <div class="property-specs">
                                     <span
