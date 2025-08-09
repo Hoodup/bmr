@@ -174,7 +174,7 @@
                         <select id="filter-type" class="form-select">
                           <option>Any Type</option>
                           <option>House</option>
-                          <option>Land</option>
+                          <option>Land Per sqm</option>
                           <option>Apartment</option>
                           <option>Condo</option>
                         </select>
@@ -207,7 +207,7 @@
                       <div class="search-field">
                         <label>&nbsp;</label>
                         <button class="btn btn-primary w-100 search-btn">
-                          <i class="bi bi-search"></i> Search
+                          <i class="bi bi-search"></i> Filters
                         </button>
                       </div>
                     </div>
@@ -283,13 +283,13 @@
                   <div
                     class="property-item"
                     data-location="Ikoyi"
-                    data-type="House"
-                    data-price="1850000"
+                    data-type="Land per sqm"
+                    data-price="500000"
                     data-bedrooms="1"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -315,6 +315,41 @@
                             data-toggle="tooltip"
                             title="Share Property"
                           >
+                            <div
+                              class="share-menu"
+                              style="
+                                display: none;
+                                position: absolute;
+                                background: #fff;
+                                border: 1px solid #ccc;
+                                padding: 8px;
+                                border-radius: 6px;
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                                z-index: 1000;
+                              "
+                            >
+                              <a
+                                href="#"
+                                class="share-link"
+                                data-network="facebook"
+                                target="_blank"
+                                >Facebook</a
+                              ><br />
+                              <a
+                                href="#"
+                                class="share-link"
+                                data-network="twitter"
+                                target="_blank"
+                                >Twitter</a
+                              ><br />
+                              <a
+                                href="#"
+                                class="share-link"
+                                data-network="whatsapp"
+                                target="_blank"
+                                >WhatsApp</a
+                              >
+                            </div>
                             <i class="bi bi-share"></i>
                           </button>
                           <button
@@ -327,7 +362,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -351,7 +386,7 @@
                           </div>
                           <div class="spec-item">
                             <i class="bi bi-droplet"></i>
-                            <span>4 Bathrooms</span>
+                            <span>4 Bakkkkkkkkkkkkthrooms</span>
                           </div>
                           <div class="spec-item">
                             <i class="bi bi-arrows-angle-expand"></i>
@@ -359,33 +394,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-2.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Jennifer Miller</strong>
-                            <span>Prime Realty Group</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -400,8 +409,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -439,7 +448,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -473,7 +482,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
+                      <!-- <div class="property-agent-info">
                         <a
                           href="properties-available\property-details.html"
                           class="property-link"
@@ -499,7 +508,7 @@
                             <i class="bi bi-telephone"></i>
                           </a>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -514,8 +523,8 @@
                     data-bedrooms="5"
                     data-pool="0"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -552,7 +561,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -584,33 +593,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Lisa Anderson</strong>
-                            <span>Texas Home Solutions</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -625,8 +608,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -664,7 +647,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -698,33 +681,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-8.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Marcus Johnson</strong>
-                            <span>Brooklyn Properties</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -739,8 +696,8 @@
                     data-bedrooms="4"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -777,7 +734,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -809,33 +766,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Bernard</strong>
-                            <span>Coastal Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -850,8 +781,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -891,7 +822,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -925,33 +856,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -965,8 +870,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1004,7 +909,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1036,33 +941,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-2.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Jennifer Miller</strong>
-                            <span>Prime Realty Group</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1077,8 +956,8 @@
                     data-bedrooms="1"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1116,7 +995,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1150,33 +1029,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-4.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Manu</strong>
-                            <span>Urban Living Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1191,8 +1044,8 @@
                     data-bedrooms="5"
                     data-pool="0"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1229,7 +1082,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1261,33 +1114,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Lisa Anderson</strong>
-                            <span>Texas Home Solutions</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1302,8 +1129,8 @@
                     data-bedrooms="1"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1341,7 +1168,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1375,33 +1202,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-8.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Marcus Johnson</strong>
-                            <span>Brooklyn Properties</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1416,8 +1217,8 @@
                     data-bedrooms="3"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1454,7 +1255,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1486,33 +1287,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Bernard</strong>
-                            <span>Coastal Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1527,8 +1302,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1568,7 +1343,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1602,33 +1377,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1642,8 +1391,8 @@
                     data-bedrooms="3"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1681,7 +1430,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1713,33 +1462,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-2.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Jennifer Miller</strong>
-                            <span>Prime Realty Group</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1756,6 +1479,13 @@
                   >
                     <a
                       href="properties-available\property-details.html"
+                      class="property-link"
+                      onclick="event.preventDefault();"
+                      >Click me</a
+                    >
+
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -1793,7 +1523,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1827,33 +1557,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-4.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Manu</strong>
-                            <span>Urban Living Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1868,10 +1572,7 @@
                     data-bedrooms="2"
                     data-pool="0"
                   >
-                    <a
-                      href="properties-available\property-details.html"
-                      class="property-link"
-                    >
+                    <a class="property-link">
                       <div class="property-image-wrapper">
                         <img
                           src="assets/img/real-estate/property-exterior-5.webp"
@@ -1879,7 +1580,7 @@
                           class="img-fluid"
                         />
                         <div class="property-status">
-                          <span class="status-badge sale">For Sale</span>
+                          <span class="status-badge sale">For Sllale</span>
                         </div>
                         <div class="property-actions">
                           <button
@@ -1906,7 +1607,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -1938,33 +1639,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Lisa Anderson</strong>
-                            <span>Texas Home Solutions</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -1979,8 +1654,8 @@
                     data-bedrooms="2"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -2018,7 +1693,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -2052,33 +1727,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-8.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Marcus Johnson</strong>
-                            <span>Brooklyn Properties</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -2093,8 +1742,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -2131,7 +1780,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -2163,33 +1812,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-9.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Bernard</strong>
-                            <span>Coastal Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -2204,8 +1827,8 @@
                     data-bedrooms="5"
                     data-pool="1"
                   >
-                    <a
-                      href="properties-available\property-details.html"
+                    <span
+                     
                       class="property-link"
                     >
                       <div class="property-image-wrapper">
@@ -2245,7 +1868,7 @@
                           </button>
                         </div>
                       </div>
-                    </a>
+                    </span>
                     <div class="property-details">
                       <a
                         href="properties-available\property-details.html"
@@ -2279,33 +1902,7 @@
                           </div>
                         </div>
                       </a>
-                      <div class="property-agent-info">
-                        <a
-                          href="properties-available\property-details.html"
-                          class="property-link"
-                        >
-                          <div class="agent-avatar">
-                            <img
-                              src="assets/img/real-estate/agent-3.webp"
-                              alt="Agent"
-                            />
-                          </div>
-                          <div class="agent-details">
-                            <strong>Chukwuebuka</strong>
-                            <span>Pacific Northwest Realty</span>
-                          </div>
-                        </a>
-                        <div class="agent-contact">
-                          <a
-                            href="properties-available\property-details.html"
-                            class="property-link"
-                          >
-                          </a
-                          ><a href="tel:+2347018899056" class="contact-btn">
-                            <i class="bi bi-telephone"></i>
-                          </a>
-                        </div>
-                      </div>
+                      <!-- Property-agent info can be placed here -->
                     </div>
                   </div>
                 </div>
@@ -2596,7 +2193,7 @@
             </div>
           </div>
 
-          <nav
+          <!-- <nav
             class="pagination-wrapper mt-5"
             data-aos="fade-up"
             data-aos-delay="350"
@@ -2636,7 +2233,7 @@
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav> -->
         </div>
       </section>
       <!-- /Properties Section -->
